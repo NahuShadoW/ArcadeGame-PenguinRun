@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class MovimientosPlayer : MonoBehaviour {
 
+	//variable que permite darle el contador d vida al player
+	 int vida = 3;
+
 	//variable para saltar
 	public float alturaSalto;
-	//variable para la velocidad del movimiento
-	public float velocidadMovimiento;
+
 	//permite saber que esta en el suelo
 	private bool enSuelo = true;
 
 	public Transform  comprobadorSuelo;
+
+	//permite comprobar el radio
 	public float comprobadorRadio = 0.07f;
+
 	//permite en que capa colosionara el comprobadorSuelo
 	public LayerMask mascaraSuelo;
 
-	
+	public AudioSource sonidoSalto;
+	public AudioClip sonidoMuerte;
+
+	void Start () {
+
+	}
 
 	void FixedUpdate(){
 
@@ -33,15 +43,25 @@ public class MovimientosPlayer : MonoBehaviour {
 		{
 			GetComponent<Rigidbody2D>().velocity = new Vector2 (GetComponent<Rigidbody2D>().velocity.x, alturaSalto);
 		}
-		//Mover a la derecha , usamos tecla D
-		if(Input.GetKey (KeyCode.D)) 
-		{
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (velocidadMovimiento, GetComponent<Rigidbody2D>().velocity.y);
-		}	
-		//Mover a la izquierda , usamos tecla A
-		if(Input.GetKey (KeyCode.A)) 
-		{
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-velocidadMovimiento, GetComponent<Rigidbody2D>().velocity.y);
-		}	
+
 	}
+		
+	public void RecibirDaño (int dañoRecibido){
+
+		if (vida != 0) {
+			vida = vida - dañoRecibido;
+		} 
+		else if(vida == 0) {
+			Muerte ();
+		}
+
+	}
+
+	//Fin del juego
+	public void Muerte(){
+
+
+	}
+
+
 }
