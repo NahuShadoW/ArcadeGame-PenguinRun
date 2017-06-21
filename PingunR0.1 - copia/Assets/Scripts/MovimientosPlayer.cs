@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 public class MovimientosPlayer : MonoBehaviour {
 
 	//variable que permite darle el contador d vida al player
+
 	public int vida;
+
 
 	//variable para saltar
 	public float alturaSalto;
@@ -16,15 +18,19 @@ public class MovimientosPlayer : MonoBehaviour {
 	public Transform  comprobadorSuelo;
 
 	//permite comprobar el radio
-	public float comprobadorRadio = 4f;
+
+	public float comprobadorRadio = 0.07f;
+
 
 	//permite en que capa colosionara el comprobadorSuelo
 	public LayerMask mascaraSuelo;
 
 	public AudioSource sonidoSalto;
+
 	public AudioSource sonidoMuerte;
 
 	void Start () {
+
 
 
 	}
@@ -46,6 +52,7 @@ public class MovimientosPlayer : MonoBehaviour {
 
 		}
 
+
 	}
 		
 	public void RecibirDaño (int dañoRecibido){
@@ -60,12 +67,15 @@ public class MovimientosPlayer : MonoBehaviour {
 
 	}
 
+
 	//Fin del juego
 	public void Muerte(){
+
 
 		SceneManager.LoadScene("GameOverScene");
 		Debug.Log("Has muerto");
 		//sonidoMuerte.Play();
+
 	}
 
 
