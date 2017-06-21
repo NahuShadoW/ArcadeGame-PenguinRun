@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingunR0.1 - copia.CSharp", "PingunR0.1 - copia.CSharp.csproj", "{FD50D28D-1B85-27F5-4E40-720958242EDE}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingunR0.1 - copia", "Assembly-CSharp.csproj", "{B5733BAC-6DA1-D8BD-BD02-88D59DACC1D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD50D28D-1B85-27F5-4E40-720958242EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD50D28D-1B85-27F5-4E40-720958242EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD50D28D-1B85-27F5-4E40-720958242EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD50D28D-1B85-27F5-4E40-720958242EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5733BAC-6DA1-D8BD-BD02-88D59DACC1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5733BAC-6DA1-D8BD-BD02-88D59DACC1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5733BAC-6DA1-D8BD-BD02-88D59DACC1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5733BAC-6DA1-D8BD-BD02-88D59DACC1D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
